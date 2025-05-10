@@ -135,7 +135,7 @@ const CourseTab = () => {
             Make changes to your courses here. Click save when you're done.
           </CardDescription>
         </div>
-        <div className="space-x-2">
+        <div className="space-x-3">
           <Button disabled={courseByIdData?.course.lectures.length === 0} variant="outline" onClick={()=> publishStatusHandler(courseByIdData?.course.isPublished ? "false" : "true")}>
             {courseByIdData?.course.isPublished ? "Unpublished" : "Publish"}
           </Button>
@@ -161,7 +161,7 @@ const CourseTab = () => {
               name="subTitle"
               value={input.subTitle}
               onChange={changeEventHandler}
-              placeholder="Ex. Become a Fullstack developer from zero to hero in 2 months"
+              placeholder="small discription of the course"
             />
           </div>
           <div>
@@ -221,13 +221,13 @@ const CourseTab = () => {
               </Select>
             </div>
             <div>
-              <Label>Price in (INR)</Label>
+              <Label>Price in (BDT)</Label>
               <Input
                 type="number"
                 name="coursePrice"
                 value={input.coursePrice}
                 onChange={changeEventHandler}
-                placeholder="199"
+                placeholder="249 "
                 className="w-fit"
               />
             </div>
@@ -243,7 +243,7 @@ const CourseTab = () => {
             {previewThumbnail && (
               <img
                 src={previewThumbnail}
-                className="e-64 my-2"
+                className="e-70 my-2"
                 alt="Course Thumbnail"
               />
             )}
